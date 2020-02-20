@@ -1,0 +1,23 @@
+{
+  "name": "note_taker",
+  "version": "1.0.0",
+  "description": "Note taking web app that lets user enter and save notes.",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewjknapp/Note_Taker.git"
+  },
+  "author": "andrewjknapp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewjknapp/Note_Taker/issues"
+  },
+  "homepage": "https://github.com/andrewjknapp/Note_Taker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jest": "^25.1.0"
+  }
+}
