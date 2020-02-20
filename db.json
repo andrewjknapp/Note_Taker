@@ -1,11 +1,6 @@
 [
  {
-  "note": "Hello"
- },
- {
-  "note": "Take out the trash"
- },
- {
-  "note": "Build note taker app"
+  "title": "New Note",
+  "note": "out"
  }
 ]
