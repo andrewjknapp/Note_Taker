@@ -1,3 +1,11 @@
-{
-    "note": "Hello"
-}
+[
+ {
+  "note": "Hello"
+ },
+ {
+  "note": "Take out the trash"
+ },
+ {
+  "note": "Build note taker app"
+ }
+]
