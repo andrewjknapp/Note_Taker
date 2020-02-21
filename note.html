@@ -4,23 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <title>Note Taker</title>
 </head>
 <body>
     <header>
-        <h1>Note Taker</h1>
+        <h3>Note Taker</h3>
+        <div>
+            <button id="addBtn">💾</button>
+            <button>✏️</button>
+            <!-- <button id="showNotes">Show Notes</button>
+            <input type="number" id="indexDelete">
+            <button id='delBtn'>Delete</button> -->
+        </div>
     </header>
     <main>
-        <button id="showNotes">Show Notes</button>
-        <div id="note"></div>
-        <form method="POST" role="form">
-            <input type="text" id="noteInput">
-            <input type="submit" id="addBtn">
-        </form>
-        <form>
-            <input type="number" id="indexDelete">
-            <input type="submit" id="delBtn">
-        </form>
+        <section id="storedNotes">
+            <div id="note"></div>
+            <div class="prevNote">
+                <h4>Note<span class="noteDelete"><button>&#215;</button></span></h4>
+                <p>Note Body</p>
+            </div>
+        </section>
+        <section id="currentNote">
+            <input type="text" id=noteTitle placeholder="New Note">
+            <textarea id="noteInput" placeholder="Type note here ..."></textarea>
+            
+        </section>
+        
+        
     </main>
     <script src="./note.js" type="text/javascript"></script>
 </body>

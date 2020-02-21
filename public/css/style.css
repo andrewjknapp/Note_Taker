@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #15BC9C;
+    width: 100%;
+    height: 10vh;
+    color: white;
+    padding: 20px;
+}
+
+header h3 {
+    display: inline-block;
+}
+
+header div {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+}
+
+#home {
+    background-color: #EBF0F1;
+    width: 80%;
+    height: 300px;
+    margin: 5% auto;
+    padding: 70px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 3em;
+    margin: 10px;
+}
+
+#home h2 {
+    margin: 10px;
+}
+
+#home button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #1E2B37;
+    color: white;
+}
+
+#storedNotes {
+    width: 25%;
+    float: left;
+    height: 90vh;
+}
+
+#currentNote {
+    width: 75%;
+    float: left;
+    height: 90vh;
+}
+
+#noteTitle {
+    width: 100%;
+    height: 15%;
+    padding: 10px;
+    font-size: 2em;
+}
+
+#noteInput {
+    display: block;
+    width: 100%;
+    height: 85%;
+    resize: none;
+    padding: 10px;
+}
+
+.prevNote {
+    width: 100%;
+}
+
+.prevNote h4 {
+    background-color: #5e6c7a;
+    color: white;
+    padding: 5px;
+}
+
+.prevNote p {
+    border-bottom-style: solid;
+    border-color: black;
+    border-width: 0.3px;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.noteDelete {
+    float: right;
+}
+
+.noteDelete button {
+    border-radius: 50%;
+    border: none;
+    background-color: #ff1414;
+    text-decoration: none;
+    cursor: pointer;
+    width: 1.1em;
+    color: white;
+    font-size: 1em;
+}

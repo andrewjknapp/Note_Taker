@@ -8,6 +8,10 @@ $('#showNotes').on('click', function(event) {
 $('#addBtn').on('click', function(event) {
     event.preventDefault();
 
+    $.get('/api/notes', function(data) {
+        $('#note').text(data);
+    })
+
     if ($('#noteInput').val().trim() !== '') {
         let newNote = { 
             title: "New Note",
