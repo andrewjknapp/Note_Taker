@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <title>Note Taker</title>
+</head>
+<body>
+    <header>
+        <h1>Note Taker</h1>
+    </header>
+    <main>
+        <button id="showNotes">Show Notes</button>
+        <div id="note"></div>
+        <form method="POST" role="form">
+            <input type="text" id="noteInput">
+            <input type="submit" id="addBtn">
+        </form>
+        <form>
+            <input type="number" id="indexDelete">
+            <input type="submit" id="delBtn">
+        </form>
+    </main>
+    <script src="./note.js" type="text/javascript"></script>
+</body>
+</html>

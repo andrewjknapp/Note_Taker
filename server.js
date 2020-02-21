@@ -15,6 +15,10 @@ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/note", function(req, res) {
+    res.sendFile(path.join(__dirname, 'note.html'));
+});
+
 app.get("/api/notes", function(req, res) {
     fs.readFile('db.json', 'utf8', function(err, data) {
         if (err) {
@@ -59,5 +63,5 @@ app.post("/api/delete", function(req, res) {
 
 
 app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+    console.log("App listening at http://localhost:" + PORT);
 });
