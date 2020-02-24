@@ -34,7 +34,7 @@ app.post("/api/notes", function(req, res) {
     fs.readFile('db.json', 'utf8', function(err, data) {
 
         data = JSON.parse(data)
-        data.push(newNote);
+        data.unshift(newNote);
 
         fs.writeFile('db.json', JSON.stringify(data, null, 1), function(err) {
             if (err) {
@@ -72,7 +72,7 @@ app.post('/api/current', function(req, res) {
         data = JSON.parse(data);
         let currentNote = data.splice(index.index, 1);
 
-        data.push(currentNote[0]);
+        data.unshift(currentNote[0]);
 
         fs.writeFile('db.json', JSON.stringify(data, null, 1), function(err) {
             if (err) { 

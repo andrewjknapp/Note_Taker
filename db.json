@@ -1,22 +1,14 @@
 [
  {
-  "title": "This is my note",
-  "note": "please refresh"
- },
- {
-  "title": "adsf",
-  "note": "asdf"
+  "title": "Did it",
+  "note": "Different text"
  },
  {
   "title": "Did it",
-  "note": "update"
+  "note": "New stufff"
  },
  {
-  "title": "This week we'll cover",
-  "note": "mySQL"
- },
- {
-  "title": "Check in",
-  "note": "Don't forget"
+  "title": "This is a new note",
+  "note": "asd"
  }
 ]

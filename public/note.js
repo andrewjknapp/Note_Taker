@@ -15,14 +15,12 @@ function showPrevNotes() {
                 <p>${data[i].note}</p>
             </div>
             `
-            $('#storedNotes').prepend(currentNote);
+            $('#storedNotes').append(currentNote);
         }
     })
 }
 
-$('#addBtn').on('click', function(event) {
-    event.preventDefault();
-
+function addNote() {
     if ($('#noteInput').val().trim() !== '') {
         
         let newNote = { 
@@ -36,8 +34,24 @@ $('#addBtn').on('click', function(event) {
             showPrevNotes();
        });
     }
+}
 
-    showPrevNotes();
+$('#addBtn').on('click', function(event) {
+    event.preventDefault();
+
+    addNote();
+
+    
+})
+
+$('#editNote').on('click', function(event) {
+
+    $.post('/api/delete', {index: 0}, function(data) {
+        addNote();
+        showPrevNotes();
+   });
+
+
 })
 
 $('#storedNotes').on('click', function(event) {
@@ -49,8 +63,12 @@ $('#storedNotes').on('click', function(event) {
         };
 
         $.post('/api/delete', indObj, function(data) {
+            
             showPrevNotes();
+            
        });
+
+       
         
     }
 

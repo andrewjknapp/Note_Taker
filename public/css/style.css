@@ -23,6 +23,16 @@ header div {
     right: 10px;
 }
 
+.iconButton {
+    border: none;
+    background-color: rgba(0,0,0,0);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.7em;
+    position: relative;
+    top: -10px
+}
+
 #home {
     background-color: #EBF0F1;
     width: 80%;
