@@ -23,13 +23,7 @@ function showPrevNotes() {
 $('#addBtn').on('click', function(event) {
     event.preventDefault();
 
-    $.get('/api/notes', function(data) {
-        $('#note').text(data);
-    })
-
     if ($('#noteInput').val().trim() !== '') {
-        let noteBrief = $('#noteInput').val().trim();
-        
 
         let newNote = { 
             title: $('#noteTitle').val().trim(),
@@ -48,11 +42,24 @@ $('#storedNotes').on('click', function(event) {
         
         let index = Number(event.target.parentElement.parentElement.getAttribute('index'));
         
-       
         $.post('/api/delete', index)
         
     }
-    showPrevNotes();
+
+    if(event.target.matches('h4')) {
+        let index = Number(event.target.getAttribute('index'));
+
+        $.post('/api/current', index);
+        
+        $.get('/api/notes', function(data) {
+            data = JSON.parse(data);
+            
+            $('#noteTitle').val(data[index].title);
+            $('#noteInput').val(data[index].note);
+        })
+    }
+
+    //showPrevNotes();
 })
 
 $('#delBtn').on('click', function(event) {

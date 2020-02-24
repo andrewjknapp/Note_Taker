@@ -62,6 +62,22 @@ app.post("/api/delete", function(req, res) {
     })
 })
 
+app.post('/api/current', function(req, res) {
+    let index = req.body;
+    fs.readFile('db.json', 'utf8', function(err, data) {
+
+        data = JSON.parse(data);
+        let currentNote = data.splice(index.index, 1);
+        
+        data.push(currentNote[0]);
+
+        fs.writeFile('db.json', JSON.stringify(data, null, 1), function(err) {
+            if (err) { 
+                throw err;
+            }
+        })
+    })
+})
 
 app.listen(PORT, function() {
     console.log("App listening at http://localhost:" + PORT);

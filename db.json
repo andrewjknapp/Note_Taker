@@ -1,1 +1,10 @@
-[]
+[
+ {
+  "title": "This is my new note",
+  "note": "I love you"
+ },
+ {
+  "title": "Chores to do",
+  "note": "adsf"
+ }
+]
