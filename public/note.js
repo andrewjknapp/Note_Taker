@@ -41,15 +41,16 @@ $('#storedNotes').on('click', function(event) {
     if(event.target.matches('button')) {
         
         let index = Number(event.target.parentElement.parentElement.getAttribute('index'));
-        
-        $.post('/api/delete', index)
+        let indObj = {
+            index: index
+        };
+
+        $.post('/api/delete', indObj)
         
     }
 
     if(event.target.matches('h4')) {
         let index = Number(event.target.getAttribute('index'));
-
-        $.post('/api/current', index);
         
         $.get('/api/notes', function(data) {
             data = JSON.parse(data);
@@ -57,6 +58,13 @@ $('#storedNotes').on('click', function(event) {
             $('#noteTitle').val(data[index].title);
             $('#noteInput').val(data[index].note);
         })
+        
+
+        let indObj = {
+            index: index
+        };
+
+        $.post('/api/current', indObj);
     }
 
     //showPrevNotes();

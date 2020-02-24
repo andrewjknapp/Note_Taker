@@ -5,10 +5,9 @@ const fs = require('fs');
 const app = express();
 const PORT = 8080;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 //Express route handlers
 app.get("/", function(req, res) {
@@ -47,6 +46,7 @@ app.post("/api/notes", function(req, res) {
 
 app.post("/api/delete", function(req, res) {
     let index = req.body;
+    
     fs.readFile('db.json', 'utf8', function(err, data) {
         
         data = JSON.parse(data);
@@ -64,11 +64,12 @@ app.post("/api/delete", function(req, res) {
 
 app.post('/api/current', function(req, res) {
     let index = req.body;
+    
     fs.readFile('db.json', 'utf8', function(err, data) {
 
         data = JSON.parse(data);
         let currentNote = data.splice(index.index, 1);
-        
+
         data.push(currentNote[0]);
 
         fs.writeFile('db.json', JSON.stringify(data, null, 1), function(err) {
