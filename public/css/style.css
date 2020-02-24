@@ -53,6 +53,7 @@ header div {
     width: 25%;
     float: left;
     height: 90vh;
+    overflow: auto;
 }
 
 #currentNote {
@@ -84,6 +85,7 @@ header div {
     background-color: #5e6c7a;
     color: white;
     padding: 5px;
+    overflow: hidden;
 }
 
 .prevNote p {
@@ -92,6 +94,8 @@ header div {
     border-width: 0.3px;
     padding: 5px;
     font-size: 0.8em;
+    overflow: hidden;
+    height: 1.8em;
 }
 
 .noteDelete {
