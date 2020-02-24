@@ -40,6 +40,7 @@ app.post("/api/notes", function(req, res) {
             if (err) {
                 throw err;
             }
+            res.status(200).json({status:"ok"});
         })
     })
 })
@@ -57,9 +58,10 @@ app.post("/api/delete", function(req, res) {
             if (err) {
                 throw err;
             }
-            
+            res.status(200).json({status:"ok"});
         })
     })
+    
 })
 
 app.post('/api/current', function(req, res) {
@@ -76,8 +78,10 @@ app.post('/api/current', function(req, res) {
             if (err) { 
                 throw err;
             }
+            res.status(200).json({status:"ok"});
         })
     })
+
 })
 
 app.listen(PORT, function() {

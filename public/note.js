@@ -24,14 +24,17 @@ $('#addBtn').on('click', function(event) {
     event.preventDefault();
 
     if ($('#noteInput').val().trim() !== '') {
-
+        
         let newNote = { 
             title: $('#noteTitle').val().trim(),
             note: $('#noteInput').val().trim()
         };
         $('#noteTitle').val('');
         $('#noteInput').val('');
-        $.post('/api/notes', newNote);
+        $.post('/api/notes', newNote, function(data) {
+            
+            showPrevNotes();
+       });
     }
 
     showPrevNotes();
@@ -45,7 +48,9 @@ $('#storedNotes').on('click', function(event) {
             index: index
         };
 
-        $.post('/api/delete', indObj)
+        $.post('/api/delete', indObj, function(data) {
+            showPrevNotes();
+       });
         
     }
 
@@ -64,18 +69,8 @@ $('#storedNotes').on('click', function(event) {
             index: index
         };
 
-        $.post('/api/current', indObj);
-    }
-
-    //showPrevNotes();
-})
-
-$('#delBtn').on('click', function(event) {
-    event.preventDefault();
-    if ($('#indexDelete').val() !== '') {
-        let index = {index: Number($('#indexDelete').val())};
-    
-        $('#indexDelete').val('')
-        $.post('/api/delete', index);
+        $.post('/api/current', indObj, function(data) {
+             showPrevNotes();
+        });
     }
 })
