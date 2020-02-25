@@ -4,7 +4,8 @@
   "description": "Note taking web app that lets user enter and save notes.",
   "main": "server.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

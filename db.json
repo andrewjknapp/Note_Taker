@@ -1,14 +1,10 @@
 [
  {
+  "title": "Done it",
+  "note": "I did it"
+ },
+ {
   "title": "Did it",
   "note": "Different text"
- },
- {
-  "title": "Did it",
-  "note": "New stufff"
- },
- {
-  "title": "This is a new note",
-  "note": "asd"
  }
 ]
