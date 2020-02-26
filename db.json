@@ -1,10 +1,10 @@
 [
  {
-  "title": "Done it",
-  "note": "I did it"
+  "title": "Store any notes",
+  "note": "You can type anything in here"
  },
  {
-  "title": "Did it",
-  "note": "Different text"
+  "title": "Click here to call edit note",
+  "note": "You can change this text"
  }
 ]
