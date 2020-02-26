@@ -1,7 +1,6 @@
 # Note Taker
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/andrewjknapp/Note Taker)
-
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)]
 ## Description
 
 This website functions as a note taking site. You can store new notes and view and edit previous notes. 
