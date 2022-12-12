@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/andrewjknapp/Note_Taker#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jest": "^25.1.0",
     "path": "^0.12.7"
   }
